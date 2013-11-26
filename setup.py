@@ -3,17 +3,19 @@
 from setuptools import setup, find_packages
 
 long_desc = '''
-This package contains the cqlengine Sphinx extension.
-
-.. add description here ..
+Sphinx directive to generate automatic Cassandra CQL table documentation and
+diagrams for cqlengine models.
 '''
 
-requires = ['Sphinx>=0.6']
+requires = [
+    'Sphinx>=0.6',
+    'sphinxcontrib-blockdiag',
+]
 
 setup(
     name='sphinxcontrib-cqlengine',
     version='0.1',
-    url='http://bitbucket.org/birkenfeld/sphinx-contrib',
+    url='https://github.com/dokai/sphinxcontrib-cqlengine',
     download_url='http://pypi.python.org/pypi/sphinxcontrib-cqlengine',
     license='BSD',
     author='Kai Lautaportti',
