@@ -61,13 +61,30 @@ Example
     from cqlengine.models import model
     from cqlengine import columns
 
-    class MyModel(Model):
-        """Normal documentation about the model.
+    class ActionLog(Model):
+        """Sharded action log
 
-        .. cassandra:: myapp.models.MyModel
+        .. cassandra:: myapp.models.AuditLog
         """
-        #: The primary key of the model
-        id = columns.TimeUUID(primary_key=True)
+        #: Type of action
+        action = columns.Text(primary_key=True, partition_key=True)
 
-        #: The human readable title of the item
-        title = columns.Text()
+        #: The year of the record
+        year = columns.Integer(primary_key=True, partition_key=True)
+
+        #: The month of the record
+        month = columns.Integer(primary_key=True, partition_key=True)
+
+        #: Timestamp of the action
+        timestamp = columns.TimeUUID(primary_key=True, default=uuid.uuid1, clustering_order='DESC')
+
+        #: Identifier of the user responsible for the action.
+        user_id = columns.TimeUUID()
+
+        #: Opaque, type specific data associated with the action.
+        data = columns.Text()
+
+
+Produces output similar to the following (depending on the Sphinx theme used)
+
+.. image:: img/example.png
