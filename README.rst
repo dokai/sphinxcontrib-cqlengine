@@ -59,9 +59,15 @@ Example
 .. code-block:: python
 
     from cqlengine.models import model
+    from cqlengine import columns
 
     class MyModel(Model):
         """Normal documentation about the model.
 
         .. cassandra:: myapp.models.MyModel
         """
+        #: The primary key of the model
+        id = columns.TimeUUID(primary_key=True)
+
+        #: The human readable title of the item
+        title = columns.Text()
