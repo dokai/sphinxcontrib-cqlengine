@@ -101,3 +101,22 @@ The generated block-diagram shows the logical structure of the model in terms
 of rows (partitions) and (possibly) clustered column groups.
 
 .. image:: img/example.png
+
+
+Credits
+=======
+
+The initial implementation was done while working for `enquos` who sponsored
+releasing the extension as open source.
+
+
+License
+=======
+
+3-clause BSD.
+
+
+Contributors
+============
+
+* Kai Lautaportti, `dokai <https://github.com/dokai>`_, (original author)
