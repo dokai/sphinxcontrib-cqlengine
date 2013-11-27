@@ -108,8 +108,7 @@ of rows (partitions) and (possibly) clustered column groups.
 Credits
 =======
 
-The initial implementation was done while working for `enquos` who sponsored
-releasing the extension as open source.
+The initial implementation was sponsored by `enquos <https://enquos.com>`_.
 
 
 License
