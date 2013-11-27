@@ -4,7 +4,7 @@ sphinxcontrib-cqlengine
 
 This package provides an extension for the `Sphinx <http://sphinx-doc.org/>`_
 documentation system for automatically generating documentation for
-`cqlengine <https://cqlengine.readthedocs.org>`_, a Python ORM for the
+`cqlengine <https://cqlengine.readthedocs.org>`_ models, a Python ORM for the
 `Cassandra <http://cassandra.apache.org/>`_ database.
 
 The extension depends on and compliments the
