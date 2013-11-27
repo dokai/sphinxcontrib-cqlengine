@@ -64,7 +64,7 @@ Example
     class ActionLog(Model):
         """Sharded action log
 
-        .. cassandra:: myapp.models.AuditLog
+        .. cassandra:: myapp.models.ActionLog
         """
         #: Type of action
         action = columns.Text(primary_key=True, partition_key=True)
