@@ -58,6 +58,8 @@ Example
 
 .. code-block:: python
 
+    # myapp/models.py
+
     from cqlengine.models import model
     from cqlengine import columns
 
