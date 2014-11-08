@@ -117,6 +117,21 @@ License
 3-clause BSD.
 
 
+Changelog
+=========
+
+0.2 (2014-11-08)
+----------------
+
+* Fixed regression caused by changes in blockdiag. [dokai]
+
+
+0.1 (2013-11-26)
+----------------
+
+* Initial public release. [dokai]
+
+
 Contributors
 ============
 

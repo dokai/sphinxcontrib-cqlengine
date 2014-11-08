@@ -14,7 +14,7 @@ requires = [
 
 setup(
     name='sphinxcontrib-cqlengine',
-    version='0.1',
+    version='0.2',
     url='https://github.com/dokai/sphinxcontrib-cqlengine',
     download_url='http://pypi.python.org/pypi/sphinxcontrib-cqlengine',
     license='BSD',
