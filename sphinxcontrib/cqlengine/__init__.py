@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 """Sphinx directives for cqlengine."""
 
-from blockdiag.utils.rst.nodes import blockdiag
 from sphinx import addnodes
 from sphinx.directives import ObjectDescription
 from sphinx.util.docfields import GroupedField
+from sphinxcontrib.blockdiag import blockdiag_node
 from string import Template
 import importlib
 
@@ -243,7 +243,7 @@ class CassandraTable(ObjectDescription):
 
             return u'\n'.join(c[0] for c in cols)
 
-        diagram = blockdiag()
+        diagram = blockdiag_node()
         if len(metadata['clusteringkey']) > 0:
             diagram['code'] = BLOCKDIAG_TEMPLATE_CLUSTERED.substitute(
                 partition_key=boxvalues(metadata['partitionkey']),
