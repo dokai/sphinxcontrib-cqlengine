@@ -174,7 +174,7 @@ class CassandraTable(ObjectDescription):
         primary_keys = [
             metacol(name, col)
             for name, col
-            in klass._primary_keys.iteritems()]
+            in klass._primary_keys.items()]
         pk_set = {name for name, _, _, _, _ in primary_keys}
         indexes = []
         columns = []
@@ -184,7 +184,7 @@ class CassandraTable(ObjectDescription):
 
         clustering_keys = [k for k in primary_keys if not k[3]]
 
-        for name, col in klass._columns.iteritems():
+        for name, col in klass._columns.items():
             metadata = metacol(name, col)
             if col.index:
                 indexes.append(metadata)
