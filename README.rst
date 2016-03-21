@@ -48,8 +48,8 @@ mapping:
 Usage
 =====
 
-The extension provides a single new directive called `cassandra` which takes a
-single argument which is the module path to the cqlengine model to document::
+The extension provides a new directive called ``cassandra`` which takes a single
+argument which is the module path to the cqlengine model to document::
 
     .. cassandra:: path.to.model
 
@@ -119,6 +119,15 @@ License
 
 Changelog
 =========
+
+1.0 (2016-03-21)
+----------------
+
+* Use the short format in the intersphinx links to the column types. [dokai]
+
+* Python 3 support [dokai]
+
+
 
 0.2 (2014-11-08)
 ----------------
